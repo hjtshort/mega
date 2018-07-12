@@ -7,7 +7,6 @@
         @endif
         <p class="name">{{ Auth::guard('admin')->user()->name }}</p>
         <p class="designation">Manager</p>
-        <span class="online"></span>
     </div>
     <ul class="nav">
         <li class="item-category">Main</li>
@@ -15,7 +14,7 @@
             <a class="nav-link"  href="{{ route('dashboard') }}" aria-expanded="false"
                aria-controls="dashboards">
                 <img src="{{ asset('/cpanel/images/icons/1.png') }}" alt="">
-                <span class="menu-title">Dashboard<i class="fa fa-sort-down"></i></span>
+                <span class="menu-title">Dashboard</span>
             </a>
         </li>
         <li class="nav-item">
@@ -62,7 +61,7 @@
             <a class="nav-link"  href="{{ route('adminlogout') }}" aria-expanded="false"
                aria-controls="dashboards">
                 <img src="{{ asset('/cpanel/images/icons/1.png') }}" alt="">
-                <span class="menu-title">Logout<i class="fa fa-sort-down"></i></span>
+                <span class="menu-title">Logout</span>
             </a>
         </li>
     </ul>

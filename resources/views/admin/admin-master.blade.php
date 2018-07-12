@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="{{ asset('cpanel/images/favicon.png') }}"/>
     <script src="{{ asset('/cpanel/node_modules/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('/cpanel/node_modules/popper.js/dist/umd/popper.min.js') }}"></script>
-    <script src="{{ asset('/cpanel/node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="{{ asset('/cpanel/node_modules/perfect-scrollbar/dist/js/perfect-scrollbar.jquery.min.js') }}"></script>
     {{--<script src="{{ asset('/cpanel/node_modules/jquery-validation/dist/jquery.validate.min.js') }}"></script>--}}
     <script src="{{ asset('/cpanel/js/off-canvas.js') }}"></script>

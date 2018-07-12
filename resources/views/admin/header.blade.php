@@ -47,40 +47,24 @@
                 </a>
                 <div class="dropdown-menu navbar-dropdown mail-notification" aria-labelledby="MailDropdown">
                     <a class="dropdown-item" href="#">
-                        <div class="sender-img">
-                            <img src="{{ asset('/cpanel/images/faces/face6.jpg') }}" alt="">
-                            <span class="badge badge-success">&nbsp;</span>
-                        </div>
                         <div class="sender">
                             <p class="Sende-name">John Doe</p>
                             <p class="Sender-message">Hey, We have a meeting planned at the end of the day.</p>
                         </div>
                     </a>
                     <a class="dropdown-item" href="#">
-                        <div class="sender-img">
-                            <img src="{{ asset('/cpanel/images/faces/face2.jpg') }}" alt="">
-                            <span class="badge badge-success">&nbsp;</span>
-                        </div>
                         <div class="sender">
                             <p class="Sende-name">Leanne Jones</p>
                             <p class="Sender-message">Can we schedule a call this afternoon?</p>
                         </div>
                     </a>
                     <a class="dropdown-item" href="#">
-                        <div class="sender-img">
-                            <img src="{{ asset('/cpanel/images/faces/face3.jpg') }}" alt="">
-                            <span class="badge badge-primary">&nbsp;</span>
-                        </div>
                         <div class="sender">
                             <p class="Sende-name">Stella</p>
                             <p class="Sender-message">Great presentation the other day. Keep up the good work!</p>
                         </div>
                     </a>
                     <a class="dropdown-item" href="#">
-                        <div class="sender-img">
-                            <img src="{{ asset('/cpanel/images/faces/face4.jpg') }}" alt="">
-                            <span class="badge badge-warning">&nbsp;</span>
-                        </div>
                         <div class="sender">
                             <p class="Sende-name">James Brown</p>
                             <p class="Sender-message">Need the updates of the project at the end of the week.</p>
@@ -89,8 +73,15 @@
                     <a href="#" class="dropdown-item view-all">View all</a>
                 </div>
             </li>
-            <li class="nav-item">
-                <a class="nav-link profile-pic" href="#"><img class="rounded-circle" src="{{ asset('/cpanel/images/faces/face1.jpg') }}" alt=""></a>
+            <li class="nav-item dropdown">
+                <a class="nav-link profile-pic" href="#" data-toggle="dropdown"><img class="rounded-circle" src="{{ asset('/cpanel/images/faces/face1.jpg') }}" alt=""></a>
+                <div class="dropdown-menu navbar-dropdown notification-drop-down" aria-labelledby="notificationDropdown">
+                    <a class="dropdown-item" href="{{ route('adminlogout') }}">
+                        <i class="fa fa-power-off text-warning fa-fw"></i>
+                        <p class="notification-text">Đăng xuất</p>
+                    </a>
+
+                </div>
             </li>
         </ul>
         <button class="navbar-toggler navbar-dark navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">

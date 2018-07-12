@@ -41,7 +41,7 @@ class AdminController extends Controller
         $authUser=$this->admin->checkRegister($user->email,$provider,$user->id);
         if(count($authUser)>0)
         {
-            return $authUser;
+            return $authUser[0];
 
         }
         else
