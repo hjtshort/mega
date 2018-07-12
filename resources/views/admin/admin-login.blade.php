@@ -47,9 +47,9 @@
                                 <button type="submit" class="btn btn-primary btn-block enter-btn">LOG IN</button>
                             </div>
                             <p class="Or-login-with my-3">Or login with</p>
-                            <a href="#" class="facebook-login btn btn-facebook btn-block">Sign in with Facebook</a>
-                            <a href="#" class="google-login btn btn-google btn-block">Sign in with Google+</a>
-                            <a href="#" class="google-login btn btn-create-account btn-block">Create An Account</a>
+                            <a href="{{ route('loginprovider','twitter') }}" class="facebook-login btn btn-facebook btn-block">Sign in with twitter</a>
+                            <a href="{{ route('loginprovider','google') }}" class="google-login btn btn-google btn-block">Sign in with Google+</a>
+                            <a href="{{ route('adminregister') }}" class="google-login btn btn-create-account btn-block">Create An Account</a>
                         </form>
                     </div>
                 </div>

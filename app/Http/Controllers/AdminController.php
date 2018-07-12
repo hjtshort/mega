@@ -2,19 +2,66 @@
 
 namespace App\Http\Controllers;
 
+use App\Repository\EloquentAdmin;
 use App\Repository\EloquentPhanQuyen;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Laravel\Socialite\Facades\Socialite;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
     private $phanquyen;
+    private $admin;
 
-    public function __construct(EloquentPhanQuyen $quyen)
+    public function __construct(EloquentPhanQuyen $quyen, EloquentAdmin $admin)
     {
         $this->phanquyen = $quyen;
+        $this->admin=$admin;
+    }
+    public function redirectProvider($provider)
+    {
+        return Socialite::driver($provider)->redirect();
+    }
+    public  function callbackProvider($provider)
+    {
+        if($provider=='google'){
+            $user = Socialite::driver($provider)->stateless()->user();
+        }
+        else{
+            $user=  Socialite::driver($provider)->user();
+        }
+
+        $authUser=$this->createUser($user,$provider);
+        Auth::guard('admin')->login($authUser,true);
+        return redirect()->route('dashboard');
+    }
+    public function createUser($user,$provider)
+    {
+        $authUser=$this->admin->checkRegister($user->email,$provider,$user->id);
+        if(count($authUser)>0)
+        {
+            return $authUser;
+
+        }
+        else
+        {
+            return $this->admin->Register([
+                'name'=>$user->name,
+                'email'=>$user->email==''? '123@gmail.com':$user->email,
+                'provider'=>$provider,
+                'provider_id'=>$user->id,
+                'avatar'=>$user->avatar_original
+
+            ]);
+        }
     }
 
+    public function logout()
+    {
+        Auth::guard('admin')->logout();
+        return redirect()->route('login');
+    }
     public function postInsertPhanQuyen(Request $request)
     {
         $messages = [
