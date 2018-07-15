@@ -20,38 +20,23 @@
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#layouts" aria-expanded="false" aria-controls="layouts">
                 <img src="{{ asset('/cpanel/images/icons/009-layout.png') }}" alt="">
-                <span class="menu-title">Layouts<i class="fa fa-sort-down"></i></span>
+                <span class="menu-title">Cấu hình<i class="fa fa-sort-down"></i></span>
             </a>
             <div class="collapse" id="layouts">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="../../pages/layout/boxed_layout.html">
-                            Boxed Layout
+                        <a class="nav-link" href="#">
+                            Cấu hình chung
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../pages/layout/horizontal_menu.html">
-                            Horizontal Sidebar
+                        <a class="nav-link" href="">
+                            Menu
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../../pages/layout/horizontal_menu_top.html">
-                            Horizontal Sidebar (alt)
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../pages/layout/sidebar_toggle_display.html">
-                            Sidebar Hidden
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../pages/layout/sidebar_absolute.html">
-                            Sidebar Overlay
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../../pages/layout/sidebar_icon.html">
-                            Icon Menu
+                        <a class="nav-link" href="">
+                            Footer
                         </a>
                     </li>
                 </ul>
